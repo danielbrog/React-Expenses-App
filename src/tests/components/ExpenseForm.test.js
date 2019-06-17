@@ -1,5 +1,6 @@
 import React from 'react'
 import {shallow} from 'enzyme'
+import moment from 'moment'
 
 import ExpenseForm from '../../components/ExpenseForm'
 import expenses from '../fixtures/expenses'
@@ -58,4 +59,33 @@ test('Should NOT set amount to something invalid', () => {
         target: {value}
     })
     expect(wrapper.state('amount')).toBe("")
+})
+
+test('should call onsubmit prop for valid form submission' , () => {
+    const onSubmitSpy = jest.fn()
+    const wrapper = shallow(<ExpenseForm expense = {expenses[0]} onSubmit={onSubmitSpy}/>)
+    wrapper.find('form').simulate('submit', {
+        preventDefault: () => {}
+    })
+    expect(wrapper.state('error')).toBe('')
+    expect(onSubmitSpy).toHaveBeenLastCalledWith({
+        description: expenses[0].description,
+        amount: expenses[0].amount,
+        note: expenses[0].note,
+        createdAt: expenses[0].createdAt
+    })
+})
+
+test('should set new date on date change', () => {
+    const now = moment()
+    const wrapper = shallow(<ExpenseForm />)
+    wrapper.find('form').children().at(2).prop('onDateChange')(now)
+    expect(wrapper.state('createdAt')).toEqual(now)
+})
+
+test('should change focus element on change', () => {
+    const wrapper = shallow(<ExpenseForm />)
+    const prev = wrapper.find('form').children().at(2).prop('focused')
+    wrapper.find('form').children().at(2).prop('onFocusChange')({focused: !prev})
+    expect(wrapper.state('focused')).toBe(!prev)
 })
