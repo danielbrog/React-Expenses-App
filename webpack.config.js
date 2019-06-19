@@ -9,13 +9,20 @@ module.exports = (env) => {
         filename: 'styles.css'
     })
 
+    let outputPath
+    if(isProduction) {
+        outputPath = path.resolve(__dirname, '../../backend/public/ReactApps/ExpensifyApp')
+    } else {
+        outputPath = path.resolve(__dirname, 'public')
+    }
+
     return {
         plugins: [
             new MiniCssExtractPlugin({filename: 'styles.css'})
         ],
         entry: './src/app.js',
         output: {
-            path: path.resolve(__dirname, 'public'),
+            path: outputPath,
             filename: 'bundle.js'
         },
         module: {
