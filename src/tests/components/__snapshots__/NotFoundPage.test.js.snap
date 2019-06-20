@@ -4,7 +4,7 @@ exports[`Testing not found page page 1`] = `
 <div>
   404 - 
   <Link
-    to="/"
+    to="/home"
   >
     Go back home.
   </Link>
