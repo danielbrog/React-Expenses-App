@@ -5,9 +5,6 @@ console.log(path.resolve(__dirname, 'public'))
 
 module.exports = (env) => {
     const isProduction = env ==='production'
-    const CSSExtract = new MiniCssExtractPlugin({
-        filename: 'styles.css'
-    })
 
     let outputPath
     if(isProduction) {
@@ -23,7 +20,7 @@ module.exports = (env) => {
         entry: './src/app.js',
         output: {
             path: outputPath,
-            filename: 'bundle.js'
+            filename: 'notes.js'
         },
         module: {
             rules: [{
