@@ -8,7 +8,7 @@ import Header from '../components/Header'
 const AppRouter = () => (
     <BrowserRouter>
     <div>
-    <Header />
+    <Header />DICK DICK
     <Switch>
         <Route exact={true} path="/ExpenseApp" component={ExpenseDashboardPage}/>
         <Route path="/ExpenseApp/create" component={AddExpensePage}/>
