@@ -1,0 +1,29 @@
+.expenseListFilter{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.expenseListFilter__label{
+    color: $dark-blue;
+    text-align: center;
+    margin: 0 0 $s-size 0;
+}
+
+.expenseListFilter__input{
+    background-color: $dark-blue;
+    border: none;
+    padding: $m-size;
+    margin: 0 $s-size $s-size 0;
+}
+.expenseListFilter__input::placeholder{
+    color: $light-blue;
+}
+
+.expenseListFilter__select{
+    padding: $m-size;
+    border: none;
+    height: $l-size;
+    margin: 0 $s-size $s-size 0;
+}
+

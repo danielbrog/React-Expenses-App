@@ -26,7 +26,7 @@ export default class ExpenseForm extends React.Component {
     }
     onAmountChange = (e) => {
         const amount = e.target.value
-        //makesureamount is currency before setting state
+        //make sure amount is currency before setting state
         if (!amount || amount.match(/^\d{1,}(\.\d{0,2})?$/)) {
             this.setState(() => ({ amount }))
         }
@@ -59,7 +59,6 @@ export default class ExpenseForm extends React.Component {
     render () {
         return (
             <div>
-                ExpenseForm
                 {this.state.error && <p>{this.state.error}</p>}
                 <form onSubmit={this.onSubmit}>
                     <input

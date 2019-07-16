@@ -1,3 +1,18 @@
-h1 {
-    color: $dark-purple;
+.header__title {
+    color: $dark-blue;
+    text-align: center;
+    font-size: $xl-size;
+}
+
+.header__navigation {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: $m-size;
+}
+
+.header__navigation__item {
+    text-decoration: none;
+    color: $dark-blue;
+    padding-left: $m-size;
 }
