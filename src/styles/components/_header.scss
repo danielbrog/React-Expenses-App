@@ -1,5 +1,5 @@
 .header__title {
-    color: $dark-blue;
+    color: $light-purple;
     text-align: center;
     font-size: $xl-size;
 }
@@ -13,6 +13,8 @@
 
 .header__navigation__item {
     text-decoration: none;
-    color: $dark-blue;
+    font-style: italic;
+    font-size: $m-size;
+    color: darken($light-blue,10%);
     padding-left: $m-size;
 }

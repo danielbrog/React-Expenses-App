@@ -1,11 +1,13 @@
 .expenseItem{
     display: flex;
     justify-content: space-between;
-    background-color: $dark-blue;
-    width: $xl-width;
+    background-color: $light-purple;
+    width: 80%;
+    max-width: $xl-width*2;
     overflow-wrap: break-word;
     border-radius: $s-size;
     margin-bottom: $m-size;
+    color: darken($dark-purple,10%);
 }
 
 .expenseItem__info{
@@ -27,21 +29,33 @@
     margin: $xs-size;
 }
 
+.expenseItem__info__note{
+    margin: $xs-size;
+}
+
 .expenseItem__edit{
     margin: $xs-size;
     text-decoration: none;
     color: $dark-blue;
+    font-weight: bold;
     padding: $xs-size;
-    background-color: lighten($light-blue,10%);
+    background-color: $light-blue;
     border-radius: $s-size;
-    border-bottom: $xs-size solid $light-blue;
-    border-right: $xs-size solid $light-blue;
+    border-bottom: $u-size solid darken($light-blue,15%);
+    border-right: $u-size solid darken($light-blue,15%);
     align-self: flex-end;
+}
+
+.expenseItem__edit:active{
+    color: $light-blue;
+    background-color: darken($light-blue,10%);
+    border-bottom: 0;
+    border-right: 0;
 }
 
 @media (max-width: $desktop-breakpoint) {
     .expenseItem{
-        width: $xl-width;
+        width: 95%;
     }
     .expenseItem__desc{
         font-size: $m-size;

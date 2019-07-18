@@ -4,26 +4,66 @@
     margin: $m-size auto;
 }
 
+.expenseListFilter__search{
+    display: flex;
+    flex-direction: row;
+}
+
 .expenseListFilter__label{
-    color: $dark-blue;
+    color: $light-purple;
     text-align: center;
     margin: 0 0 $s-size 0;
 }
 
 .expenseListFilter__input{
-    background-color: $dark-blue;
+    background-color: $light-purple;
+    color: $dark-blue;
     border: none;
     padding: $m-size;
     margin: 0 $s-size $s-size 0;
+    width: auto;
 }
 .expenseListFilter__input::placeholder{
-    color: $light-blue;
+    color: $dark-blue;
 }
 
 .expenseListFilter__select{
-    padding: $m-size;
-    border: none;
-    height: $l-size;
+    overflow: hidden;
     margin: 0 $s-size $s-size 0;
+    -webkit-appearance: none;
+    width: auto;
 }
 
+.expenseListFilter__select select{
+    color: $dark-purple;
+    background-color: $light-purple;
+    border: none;
+    padding: $m-size;
+    cursor: pointer;
+    -webkit-appearance: none;
+    width: 100%;
+}
+
+.expenseListFilter__select option{
+    cursor: pointer;
+}
+
+.expenseListFilter__datePicker{
+    margin: 0 $s-size $s-size 0;
+    background-color: $dark-purple;
+}
+
+@media (max-width: $desktop-breakpoint) {
+    .expenseListFilter__search{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .expenseListFilter__input{
+        margin: 0 0 $s-size 0;
+    }
+
+    .expenseListFilter__select{
+        margin: 0 0 $s-size 0;
+    }
+}

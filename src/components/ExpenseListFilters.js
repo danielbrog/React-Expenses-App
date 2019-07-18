@@ -24,10 +24,10 @@ export class ExpenseListFilters extends React.Component {
     }
 
     onSortChange = (e) => {
-        if (e.target.value == 'date'){
-            this.props.sortByDate()
-        }else{
+        if (e.target.value == 'amount'){
             this.props.sortByAmount()
+        }else{
+            this.props.sortByDate()
         }
     }
 
@@ -36,29 +36,31 @@ export class ExpenseListFilters extends React.Component {
             <div className="expenseListFilter">
             <div className="expenseListFilter__label">Search:</div><div className="expenseListFilter__search">
                 <input 
-                className="expenseListFilter__input"
-                type="text" 
-                value={this.props.filters.text} 
-                onChange={this.onTextChange}
-                placeholder="Description"/>
-                <select
-                className="expenseListFilter__select"
-                value={this.props.filters.sortBy}
-                onChange={this.onSortChange}>
-                    <option value="date">Date</option>
-                    <option value="amount">Amount</option>
-                </select>
+                    className="expenseListFilter__input"
+                    type="text" 
+                    value={this.props.filters.text} 
+                    onChange={this.onTextChange}
+                    placeholder="Description"/>
+                <div className="expenseListFilter__select">
+                    <select
+                        value={this.props.filters.sortBy}
+                        onChange={this.onSortChange}>
+                            <option value="date">Date</option>
+                            <option value="amount">Amount</option>
+                    </select>
+                </div>
                 <DateRangePicker
-                startDate={this.props.filters.startDate}
-                startDateId="your_unique_start_date_id" 
-                endDate = {this.props.filters.endDate}
-                endDateId="your_unique_end_date_id" 
-                onDatesChange = {this.onDatesChange}
-                focusedInput = {this.state.focused}
-                onFocusChange = {this.onFocusChange}
-                showClearDates={true}
-                numberOfMonths ={1}
-                isOutsideRange={() => false}
+                    startDate={this.props.filters.startDate}
+                    startDateId="your_unique_start_date_id" 
+                    endDate = {this.props.filters.endDate}
+                    endDateId="your_unique_end_date_id" 
+                    onDatesChange = {this.onDatesChange}
+                    focusedInput = {this.state.focused}
+                    onFocusChange = {this.onFocusChange}
+                    showClearDates={true}
+                    numberOfMonths ={1}
+                    isOutsideRange={() => false}
+                    calendarClassName="expenseListFilter__datePicker"
                 />
                 </div>
             </div>
