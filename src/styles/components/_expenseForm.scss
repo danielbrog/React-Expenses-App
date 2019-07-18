@@ -1,0 +1,59 @@
+.expenseForm{
+    display: flex;
+}
+
+.expenseForm__info{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    margin: $m-size auto;
+    align-items: center;
+    background-color: lighten($dark-purple,10%);
+    padding: $m-size;
+    border-radius: $xs-size;
+}
+
+
+.expenseForm__info__input{
+    background-color: $light-purple;
+    border: none;
+    padding: $m-size;
+    margin: 0 0 $s-size 0;
+    width: 90%;
+}
+
+.expenseForm__info__input::placeholder{
+    color: $dark-blue;
+}
+
+.expenseForm__info__note{
+    background-color: $light-purple;
+    color: $dark-blue;
+    border: none;
+    padding: $m-size;
+    margin: 0 $s-size $s-size $s-size;
+    width: 90%;
+}
+
+.expenseForm__info__note::placeholder{
+    color: $dark-blue;
+}
+
+.expenseForm__info__button{
+    margin: $xs-size 0 0 0;
+    text-decoration: none;
+    color: $dark-blue;
+    font-weight: bold;
+    padding: $xs-size;
+    background-color: $light-blue;
+    border-radius: $s-size;
+    border-bottom: $u-size solid darken($light-blue,15%);
+    border-right: $u-size solid darken($light-blue,15%);
+    align-self: flex-end;
+}
+.expenseForm__info__button:active{
+    color: $light-blue;
+    background-color: darken($light-blue,10%);
+    border-bottom: 0;
+    border-right: 0;
+}

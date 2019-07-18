@@ -58,10 +58,12 @@ export default class ExpenseForm extends React.Component {
 
     render () {
         return (
-            <div>
+            <div className="expenseForm">
                 {this.state.error && <p>{this.state.error}</p>}
-                <form onSubmit={this.onSubmit}>
+                <form  className = "expenseForm__info" onSubmit={this.onSubmit}>
+
                     <input
+                    className="expenseForm__info__input"
                     type="text"
                     placeholder="Description"
                     autoFocus
@@ -69,11 +71,19 @@ export default class ExpenseForm extends React.Component {
                     onChange={this.onDescriptionChange}
                     />
                     <input 
+                    className="expenseForm__info__input"
                     type="text"
                     placeholder="Amount"
                     value={this.state.amount}
                     onChange={this.onAmountChange}
                     />
+                    <textarea
+                    className="expenseForm__info__note"
+                    placeholder="Add a note for your expense (optional)"
+                    value={this.state.note}
+                    onChange={this.onNoteChange}
+                    >
+                    </textarea>
                     <SingleDatePicker
                     onDateChange={this.onDateChange}
                     onFocusChange={this.onFocusChange}
@@ -82,13 +92,7 @@ export default class ExpenseForm extends React.Component {
                     numberOfMonths = {1}
                     isOutsideRange={() => false}
                     />
-                    <textarea
-                    placeholder="Add a note for your expense (optional)"
-                    value={this.state.note}
-                    onChange={this.onNoteChange}
-                    >
-                    </textarea>
-                    <button>Add Expense</button>
+                    <button className="expenseForm__info__button">Add Expense</button>
                 </form>
             </div>
         )

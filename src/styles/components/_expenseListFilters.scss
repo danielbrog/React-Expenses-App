@@ -2,6 +2,9 @@
     display: flex;
     flex-direction: column;
     margin: $m-size auto;
+    background-color: lighten($dark-purple,10%);
+    padding: $s-size;
+    border-radius: $xs-size;
 }
 
 .expenseListFilter__search{
