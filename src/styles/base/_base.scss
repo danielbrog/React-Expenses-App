@@ -20,3 +20,22 @@ button:disabled{
 .is-active{
     font-weight: bold;
 }
+
+.button{
+    margin: $xs-size 0 0 0;
+    text-decoration: none;
+    color: $dark-blue;
+    font-weight: bold;
+    padding: $xs-size;
+    background-color: $light-blue;
+    border-radius: $s-size;
+    border-bottom: $u-size solid darken($light-blue,15%);
+    border-right: $u-size solid darken($light-blue,15%);
+    align-self: flex-end;
+}
+.button:active{
+    color: $light-blue;
+    background-color: darken($light-blue,10%);
+    border-bottom: 0;
+    border-right: 0;
+}

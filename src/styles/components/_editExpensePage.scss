@@ -1,0 +1,13 @@
+.editExpensePage{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.editExpensePage__button {
+    align-self: center;
+    position: relative;
+    left: -$xl-size;
+    margin-top:0;
+    bottom: $s-width - $l-size + $u-size;
+}

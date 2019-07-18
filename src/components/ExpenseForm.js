@@ -92,7 +92,7 @@ export default class ExpenseForm extends React.Component {
                     numberOfMonths = {1}
                     isOutsideRange={() => false}
                     />
-                    <button className="expenseForm__info__button">Add Expense</button>
+                    <button className="button">Add Expense</button>
                 </form>
             </div>
         )
