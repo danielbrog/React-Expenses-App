@@ -4,10 +4,10 @@ import ExpenseListItem from './ExpenseListItem'
 import selectExpenses from '../selectors/expenses'
 
 export const ExpenseList = (props) => (
-    <div>
+    <div className="expenseList">
     {
         props.expenses.length ===0 ? (
-            <p>No Expenses.</p>
+            <p className="expenseList__noExpense">No Expenses.</p>
         ) : (
             props.expenses.map((expense) => (
                 <ExpenseListItem 

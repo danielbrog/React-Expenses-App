@@ -1,7 +1,7 @@
 .expenseListFilter{
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
+    margin: $m-size auto;
 }
 
 .expenseListFilter__label{

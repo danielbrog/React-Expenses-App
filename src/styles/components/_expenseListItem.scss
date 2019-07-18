@@ -1,0 +1,49 @@
+.expenseItem{
+    display: flex;
+    justify-content: space-between;
+    background-color: $dark-blue;
+    width: $xl-width;
+    overflow-wrap: break-word;
+    border-radius: $s-size;
+    margin-bottom: $m-size;
+}
+
+.expenseItem__info{
+    display: flex;
+    flex-direction: column;
+    overflow-wrap: break-word;
+    min-width: 0;
+}
+
+.expenseItem__info__desc{
+    margin: $xs-size;
+}
+
+.expenseItem__info__amount{
+    margin: $xs-size;
+}
+
+.expenseItem__info__date{
+    margin: $xs-size;
+}
+
+.expenseItem__edit{
+    margin: $xs-size;
+    text-decoration: none;
+    color: $dark-blue;
+    padding: $xs-size;
+    background-color: lighten($light-blue,10%);
+    border-radius: $s-size;
+    border-bottom: $xs-size solid $light-blue;
+    border-right: $xs-size solid $light-blue;
+    align-self: flex-end;
+}
+
+@media (max-width: $desktop-breakpoint) {
+    .expenseItem{
+        width: $xl-width;
+    }
+    .expenseItem__desc{
+        font-size: $m-size;
+    }
+}

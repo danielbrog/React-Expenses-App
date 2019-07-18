@@ -1,0 +1,10 @@
+.expenseList{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+.expenseList__noExpense{
+    color: $dark-blue;
+}
